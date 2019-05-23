@@ -1,0 +1,38 @@
+[
+    {
+        "comment 1" : "<div class='col-md-6 col-sm-12 col-xs-12'>
+            <figure class='effect'>
+                <img src='/res/images/project_oranjebitter.jpg' alt='Film Hall' />
+
+                <figcaption>
+                    <h3>Film Halls</h3>
+                    <p>Build a website for the Film halls.</p>
+                    <p><strong>Tags:</strong> <br />Development, Bootstrap, Laravel, JavaScript, Design</p>
+                    <a href='http://oranjebitter-rotterdam.nl' target='_blank'>View more</a>
+                    <span class='icon'>
+                        <span class='glyphicon glyphicon-new-window'></span>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+        "
+    },
+    {
+        "comment 2" : "<!-- <div class='col-md-6 col-sm-12 col-xs-12'>
+        <figure class='effect'>
+            <img src='/view/images/project_oetelspel.jpg' alt='Oetelspel' />
+
+            <figcaption>
+                <h3>Oetelspel</h3>
+                <p>An online game specially for Carneval at 's-Hertogenbosch.</p>
+                <p><strong>Tags:</strong> <br />Development, Concept, Founder</p>
+                <a href='http://oetelspel.nl' target='_blank'>View more</a>
+                <span class='icon'>
+                    <span class='glyphicon glyphicon-new-window'></span>
+                </span>
+            </figcaption>
+        </figure>
+    </div> -->"
+    }
+
+]
