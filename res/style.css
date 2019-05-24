@@ -171,7 +171,7 @@ font-size: 36px;
     width: 100%;
 }
 #projects figure .icon { 
-	background: #22A39F;
+	background: rgb(163, 34, 34);
 	position: absolute;
 	top: 0px;
 	right: 0px;
