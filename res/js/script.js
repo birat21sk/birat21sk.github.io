@@ -44,7 +44,7 @@ function applyNavigation()
 
 function applyClickEvent()
 {
-	$('a[href*=#]').on('click', function(e)
+	$('a[href*=\\#]').on('click', function(e)
 	{
 		e.preventDefault();
 		
