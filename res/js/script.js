@@ -7,7 +7,6 @@ $(document).ready(function()
 	applyMailTo();
 	applyResize();
 	checkHash();
-	checkBrowser();
 });
 
 /* HEADER FUNCTIONS */
@@ -139,34 +138,6 @@ function checkHash()
 }
 
 /* IE7- FALLBACK FUNCTIONS */
-
-function checkBrowser()
-{
-	var loBrowserVersion = getBrowserAndVersion();
-	
-	if(loBrowserVersion.browser == 'Explorer' && loBrowserVersion.version < 8)
-	{ 
-		$('#upgrade-dialog').modal({
-			backdrop: 'static',
-			keyboard: false
-		});
-	}
-}
-
-function getBrowserAndVersion() 
-{
-	var laBrowserData = [{
-		string: 		navigator.userAgent,
-		subString: 		'MSIE',
-		identity: 		'Explorer',
-		versionSearch: 	'MSIE'
-	}];
-	
-	return {
-		browser: searchString(laBrowserData) || 'Modern Browser',
-		version: searchVersion(navigator.userAgent) || searchVersion(navigator.appVersion) || '0.0'
-	};
-}
 
 function searchString(paData) 
 {
