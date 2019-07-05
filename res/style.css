@@ -354,4 +354,14 @@ figure.effect:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+} 
+
+.fa-twitter{
+	color: #fff!important;
+}
+
+.blue{
+	background:#1ca0f1!important;
+	color: #fff;
+	border: none;
 }
