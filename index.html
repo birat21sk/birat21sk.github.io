@@ -1,24 +1,474 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Birat Siku</title>
-	<link rel="stylesheet" type="text/css" href="style.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway&display=swap">
-</head>
-<body>
-	<div id="root">
-		<div class="container">
-			<div class="content">
-				<div class="img">
-					<img src="cart.gif" alt="Maintanance" width="400px">
-				</div>
-				<div class="main">
-					<p>Under Maintanance</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birat Siku</title>
+    <script type="module" crossorigin src="/assets/index.6a31e4c3.js"></script>
+    <link rel="stylesheet" href="/assets/index.eceaa85d.css">
+  </head>
+  <body class="light-theme body">
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <div class="page" asscroll-container>
+      <div class="toggle-mode">
+        <div class="light-mode">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 15q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Zm0 2q-2.075 0-3.537-1.463Q7 14.075 7 12t1.463-3.538Q9.925 7 12 7t3.538 1.462Q17 9.925 17 12q0 2.075-1.462 3.537Q14.075 17 12 17ZM2 13q-.425 0-.712-.288Q1 12.425 1 12t.288-.713Q1.575 11 2 11h2q.425 0 .713.287Q5 11.575 5 12t-.287.712Q4.425 13 4 13Zm18 0q-.425 0-.712-.288Q19 12.425 19 12t.288-.713Q19.575 11 20 11h2q.425 0 .712.287.288.288.288.713t-.288.712Q22.425 13 22 13Zm-8-8q-.425 0-.712-.288Q11 4.425 11 4V2q0-.425.288-.713Q11.575 1 12 1t.713.287Q13 1.575 13 2v2q0 .425-.287.712Q12.425 5 12 5Zm0 18q-.425 0-.712-.288Q11 22.425 11 22v-2q0-.425.288-.712Q11.575 19 12 19t.713.288Q13 19.575 13 20v2q0 .425-.287.712Q12.425 23 12 23ZM5.65 7.05 4.575 6q-.3-.275-.288-.7.013-.425.288-.725.3-.3.725-.3t.7.3L7.05 5.65q.275.3.275.7 0 .4-.275.7-.275.3-.687.287-.413-.012-.713-.287ZM18 19.425l-1.05-1.075q-.275-.3-.275-.712 0-.413.275-.688.275-.3.688-.287.412.012.712.287L19.425 18q.3.275.288.7-.013.425-.288.725-.3.3-.725.3t-.7-.3ZM16.95 7.05q-.3-.275-.287-.688.012-.412.287-.712L18 4.575q.275-.3.7-.288.425.013.725.288.3.3.3.725t-.3.7L18.35 7.05q-.3.275-.7.275-.4 0-.7-.275ZM4.575 19.425q-.3-.3-.3-.725t.3-.7l1.075-1.05q.3-.275.713-.275.412 0 .687.275.3.275.288.688-.013.412-.288.712L6 19.425q-.275.3-.7.287-.425-.012-.725-.287ZM12 12Z"
+            />
+          </svg>
+        </div>
+        <div class="toggle-btn">
+          <div class="toggle-btn-circle"></div>
+        </div>
+        <div class="dark-mode">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path
+              fill="currentColor"
+              d="M12 21q-3.775 0-6.388-2.613Q3 15.775 3 12q0-3.45 2.25-5.988Q7.5 3.475 11 3.05q.625-.075.975.45t-.025 1.1q-.425.65-.638 1.375Q11.1 6.7 11.1 7.5q0 2.25 1.575 3.825Q14.25 12.9 16.5 12.9q.775 0 1.538-.225.762-.225 1.362-.625.525-.35 1.075-.038.55.313.475.988-.35 3.45-2.937 5.725Q15.425 21 12 21Zm0-2q2.2 0 3.95-1.212 1.75-1.213 2.55-3.163-.5.125-1 .2-.5.075-1 .075-3.075 0-5.238-2.162Q9.1 10.575 9.1 7.5q0-.5.075-1t.2-1q-1.95.8-3.162 2.55Q5 9.8 5 12q0 2.9 2.05 4.95Q9.1 19 12 19Zm-.25-6.75Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Preloader -->
+      <div class="load-wrap">
+        <div class="load-flex">
+          <div class="preloader">
+            <div class="preloader-wrapper">
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-wrapper" asscroll>
+        <section class="intro">
+          <div class="intro-wrapper">
+            <div class="intro-text">Hi There!</div>
+            <!-- <div class="intro-greet">ヘ(^o^)ノ  \(^_^)/</div> -->
+
+            <div class="intro-greet">
+              <span>
+                <div>
+                  ヘ(^o^)<span class="wave1" id="wave1">ノ</span>&nbsp;&nbsp;
+                </div>
+                <div>
+                  <div class="wave2" id="wave2">\</div>
+                  &nbsp;(^_^)&nbsp;
+                  <div class="wave2b" id="wave2b">/</div>
+                </div>
+              </span>
+            </div>
+
+            <div class="arrow-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                <path
+                  fill="currentColor"
+                  d="m12 15.4-6-6L7.4 8l4.6 4.6L16.6 8 18 9.4Z"
+                />
+              </svg>
+            </div>
+
+            <div class="intro-main">
+              <h1 class="intro-main-title">Birat Siku</h1>
+              <p class="intro-main-description">
+                Software engineer | AWS certified
+              </p>
+            </div>
+
+            <div class="intro-second">
+              <h1 class="intro-second-description first-subhead">Birat S.K</h1>
+              <p class="intro-second-description second-subhead">Portfolio</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section glass right">
+          <section class="section-title">
+            <div class="section-title-text">
+              <span class="welcome">
+                Welcome <br />to <br />my <br />room
+              </span>
+            </div>
+          </section>
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section glass right">
+          <section class="section-title">
+            <div class="section-title-text">About me</div>
+            <div class="separate">
+              <div class="line"></div>
+              <div class="line ml-2"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-2"></div>
+              <div class="line"></div>
+            </div>
+          </section>
+          <section class="section-detail-wrapper">
+            <!-- <h3 class="section-heading">Hi</h3> -->
+            <p class="section-text">
+              Software engineer with a strong foundation in computer science and
+              a passion for building intuitive software. He is an AWS Certified
+              Cloud Practitioner and skilled in agile development methodologies.
+            </p>
+            <p class="section-text">
+              Passionate guitarist who has a deep appreciation for the creative
+              process and enjoys bringing that same level of creativity to his
+              work in software development.
+            </p>
+          </section>
+        </section>
+
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section glass left">
+          <section class="section-title">
+            <div class="section-title-text">What I do</div>
+            <div class="separate">
+              <div class="line"></div>
+              <div class="line ml-2"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-2"></div>
+              <div class="line"></div>
+            </div>
+          </section>
+          <div id="wid wrig"></div>
+          <section class="section-detail-wrapper wid-gap">
+            <div class="wid wlef">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Javascript</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/javascript.baa03265.svg" alt="Javascript" />
+              </div>
+            </div>
+            <div class="wid wrig">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Typescript</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/typescript.25e995fa.svg" alt="Typescript" />
+              </div>
+            </div>
+            <div class="wid wlef">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Amazon AWS</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/aws.d213d7da.svg" alt="Amazon AWS" />
+              </div>
+            </div>
+            <div class="wid wrig">
+              <div class="wid-tname">
+                <img src="/assets/express.5b6abc16.svg" alt="Express js" width="152px" class="img-invert">
+              </div>
+              <div class="widic">
+                <img src="/assets/node.9371c6ba.svg" alt="Node JS" />
+              </div>
+            </div>
+            <div class="wid wlef">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Python</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/python.6aa0ccc7.svg" alt="Python" />
+              </div>
+            </div>
+            <div class="wid wrig">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">React / React-Native</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/reactjs.e8f9b857.svg" alt="React Js" />
+              </div>
+            </div>
+            <div class="wid wlef">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Expo</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/expo.2036c16a.svg" alt="Expo" />
+              </div>
+            </div>
+            <div class="wid wrig">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Git</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/git.2cc643ae.svg" alt="Git" />
+              </div>
+            </div>
+            <div class="wid wlef">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Docker</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/docker.557122d8.svg" alt="Docker" />
+              </div>
+            </div>
+            <div class="wid wrig">
+              <div class="wid-tname">
+                <h1 class="wid-tname-text">Bit</h1>
+              </div>
+              <div class="widic">
+                <img src="/assets/bit.d3f52629.svg" alt="Bit" />
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <div class="forth-move section-margin"></div>
+
+        <section class="forth-section section glass left">
+          <section class="section-title">
+            <div class="section-title-text">Milestones</div>
+            <div class="separate">
+              <div class="line"></div>
+              <div class="line ml-2"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-2"></div>
+              <div class="line"></div>
+            </div>
+          </section>
+          <section class="section-detail-wrapper">
+            <div class="section-block">
+              <h3 class="section-heading">Research</h3>
+              <div class="card">
+                <div class="card-image">
+                  <img
+                    src="/assets/journal.8c24192d.jpg"
+                    alt="Computers in Biology and Medicine, An international journal"
+                  />
+                </div>
+                <div class="card-desc">
+                  <h3 class="card-desc-title">
+                    Explanatory classification of CXR images into COVID-19,
+                    Pneumonia and Tuberculosis using deep learning and XAI
+                  </h3>
+                  <div class="card-desc-body">
+                    <p>
+                      <i>
+                        Computers in Biology and Medicine,
+                        <a
+                          href="https://www.sciencedirect.com/journal/computers-in-biology-and-medicine/vol/150/suppl/C"
+                          target="_blank"
+                          >Volume 150</a
+                        >
+                      </i>
+                    </p>
+                    <p>
+                      <i>(IF: 6.69, TQ: Q1)</i>
+                    </p>
+                  </div>
+                  <div class="card-desc-foot">
+                    <span>DOI:</span>
+                    <a
+                      href="https://doi.org/10.1016/j.compbiomed.2022.106156"
+                      target="_blank"
+                      >10.1016/j.compbiomed.2022.106156</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="orcid-block">
+                <div class="orcid-logo">
+                  <img src="/assets/orcid_logo.98a8bdd8.svg" alt="ORCID" />
+                </div>
+                <div class="orcid-desc">
+                  <div class="orcid-desc-logo">
+                    <img src="/assets/orcid.38338f49.png" alt="ORCID ID" />
+                  </div>
+                  <a
+                    href="https://orcid.org/0000-0002-1454-2666"
+                    target="_blank"
+                    >orcid.org/0000-0002-1454-2666</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="section-block">
+              <h3 class="section-heading">Certification</h3>
+              <div class="card">
+                <div class="card-image">
+                  <img src="/assets/aws_cp.eefa1b3f.png" alt="Image" />
+
+                  <div class="provided">
+                    <a
+                      target="_blank"
+                      href="https://www.credly.com/"
+                      class="provided-link"
+                      >PROVIDED BY
+                      <span>Credly</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-desc">
+                  <h3 class="card-desc-title">
+                    AWS Certified Cloud Practitioner
+                  </h3>
+                  <div class="card-desc-body">
+                    <p>Issued Dec 2022 · Expires Dec 2025</p>
+                    <p>Credential ID YVMTDY0KYJBQQZ9Z</p>
+                    <p>
+                      <i>
+                        <a
+                          href="https://www.credly.com/organizations/amazon-web-services/badges"
+                          target="_blank"
+                        >
+                          Amazon Web Services Training and Certification
+                        </a>
+                      </i>
+                    </p>
+                  </div>
+                  <div class="card-desc-foot">
+                    <a
+                      href="https://www.credly.com/badges/0924815c-8545-44a9-a2ac-fef2743ede44/public_url"
+                      class="show-credential"
+                      target="_blank"
+                    >
+                      Show credential
+                      <img
+                        src="/assets/new-tab.6f3b0219.svg"
+                        width="16px"
+                        alt="external link"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-image">
+                  <img src="/assets/aws_cf.790c7d92.png" alt="Image" />
+                  <div class="provided">
+                    <a
+                      target="_blank"
+                      href="https://www.credly.com/"
+                      class="provided-link"
+                      >PROVIDED BY
+                      <span>Credly</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="card-desc">
+                  <h3 class="card-desc-title">
+                    AWS Academy Graduate - AWS Academy Cloud Foundations
+                  </h3>
+                  <div class="card-desc-body">
+                    <p>Issued Jun 2022 · No Expiration Date</p>
+                    <p>
+                      <i>
+                        <a
+                          href="https://www.credly.com/organizations/amazon-web-services/badges"
+                          target="_blank"
+                        >
+                          Amazon Web Services Training and Certification
+                        </a>
+                      </i>
+                    </p>
+                  </div>
+                  <div class="card-desc-foot">
+                    <a
+                      href="https://www.credly.com/badges/4821f807-3032-474a-9b03-49feeb31a9f0/embedded"
+                      class="show-credential"
+                      target="_blank"
+                    >
+                      Show credential
+                      <img
+                        src="/assets/new-tab.6f3b0219.svg"
+                        width="16px"
+                        alt="external link"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <div class="fifth-move section-margin"></div>
+
+        <section class="fifth-section section glass right">
+          <section class="section-title">
+            <div class="section-title-text">Let's connect</div>
+            <div class="separate">
+              <div class="line"></div>
+              <div class="line ml-2"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-3"></div>
+              <div class="line ml-2"></div>
+              <div class="line"></div>
+            </div>
+          </section>
+          <section class="section-detail-wrapper">
+            <div class="section-text">
+              <p>
+                Thank you for visiting my portfolio! I am always looking for new
+                opportunities and connections in the industry. If you would like
+                to get in touch with me, please feel free to connect.
+              </p>
+              <div class="connect">
+                <a
+                  class="connect-with"
+                  style="width: 152px; background-color: #0077b5"
+                  href="https://www.linkedin.com/in/biratsk/"
+                  target="_blank"
+                >
+                  <div class="connect-with-logo">in</div>
+                  <div class="connect-with-desc">Let's connect!</div>
+                </a>
+                <p>or,</p>
+                <a
+                  class="connect-with"
+                  style="width: 128px; background-color: #d54b00"
+                  href="mailto:birat.siku@hotmail.com"
+                  target="_blank"
+                >
+                  <div class="connect-with-logo">@</div>
+                  <div class="connect-with-desc">E-mail me</div>
+                </a>
+              </div>
+              <p>
+                I am always open to discussing potential projects
+                orcollaborations. I look forward to connecting with you!
+              </p>
+              <p>Thank you again for stopping by ! ☺️☺️☺️</p>
+
+              <a
+                class="buymeacoffee"
+                href="https://www.buymeacoffee.com/biratsk"
+                target="_blank"
+              >
+                <img
+                  src="/assets/coffee.22b304a6.jpeg"
+                  alt="Buy me a coffee"
+                  class="coffee-img"
+                />
+              </a>
+            </div>
+          </section>
+          <div class="bye">
+            <img src="/assets/bye.cca979eb.png" alt="Bye" />
+          </div>
+        </section>
+      </div>
+    </div>
+
+    
+  </body>
 </html>
